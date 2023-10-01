@@ -1,3 +1,62 @@
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
+
+body {
+    padding: 20px;
+}
+
+/* Style the header */
+header {
+    background-color: #0906bdb2;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Style the main content area */
+main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Style the sidebar */
+aside {
+    flex: 1;
+    margin-right: 20px;
+    padding: 20px;
+}
+
+/* Style the search form */
+form {
+    margin-bottom: 20px;
+}
+
+/* Style the search history */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style the city result section */
+div:nth-child(2) {
+    flex: 2;
+}
+
+/* Style the list items for temperature, wind, and humidity */
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Add some spacing to the date and forecast icon in the City Result section */
+span {
+    margin-right: 10px;
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
