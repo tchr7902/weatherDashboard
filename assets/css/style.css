@@ -31,6 +31,8 @@ aside {
 /* Style the search form */
 form {
     margin-bottom: 20px;
+    display: flex;
+
 }
 
 /* Style the search history */
@@ -47,6 +49,7 @@ div:nth-child(2) {
 /* Style the list items for temperature, wind, and humidity */
 ul li {
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 /* Add some spacing to the date and forecast icon in the City Result section */
@@ -54,9 +57,35 @@ span {
     margin-right: 10px;
 }
 
+.card {
+    background-color: rgba(116, 116, 116, 0.507);
+}
+
 #resultBox {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
+}
+
+#forecast {
+    padding-top: 20px;
+}
+
+input[type="submit"] {
+    width: 5em;
+    padding: 5px;
+    background-color: #0906bd6e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+input[type="text"] {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-width: 1px;
+    padding-left: 7px;
 }
