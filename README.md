@@ -10,9 +10,13 @@ I built this project in order to apply my knowledge into a real world applicatio
 
 I did a lot of out of class research and learning to make this project functional. Here are a few of the resources used:
 
-[Link text](https://www.w3schools.com/)
-[Link text](https://www.codecademy.com/)
-[Link text](https://developer.mozilla.org/en-US/)
-[Link text](https://stackoverflow.com/)
+[W3 Schools](https://www.w3schools.com/)
+[Code Academy](https://www.codecademy.com/)
+[MDN Docs](https://developer.mozilla.org/en-US/)
+[Stack Overflow](https://stackoverflow.com/)
 
 ## Deployed Site
+
+[Weather Dashboard](https://tchr7902.github.io/weatherDashboard/)
+
+![Deployed Website](./assets/images/Capture.PNG)
