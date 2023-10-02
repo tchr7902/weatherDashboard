@@ -39,22 +39,17 @@ document.addEventListener('DOMContentLoaded', function () {
                     humidity: `${data.main.humidity}%`
                 };
 
-                // Display the city result
                 displayCityResult(cityResult);
 
-                // Save the search to local storage
                 saveSearchToLocalStorage(cityName);
-                // Display the updated search history
                 displaySearchHistory();
 
-                // Show the resultBox
                 resultBox.style.display = 'block';
             })
             .catch(error => {
                 console.error('Error fetching current weather data:', error);
             });
 
-        // Fetch 5-day forecast data from the API
         const forecastApiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}&units=imperial`;
 
         fetch(forecastApiUrl)
@@ -64,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 const forecastData = data.list.filter(entry => entry.dt_txt.includes('12:00:00')); // Get daily forecasts at 12:00 PM
                 displayForecastCards(forecastData);
 
-                // Show the forecast section
                 forecast.style.display = 'block';
             })
             .catch(error => {
@@ -72,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     });
 
-    // Function to clear previous results
     function clearResults() {
         resultContainer.innerHTML = '';
         forecastCardsContainer.innerHTML = '';
@@ -115,12 +108,11 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         `;
 
-            // Append card to container
             forecastCardsContainer.appendChild(card);
         });
     }
 
-    // Function to get weather icon URL based on icon code
+    // Function to get weather icon
     function getWeatherIcon(iconCode) {
         return `http://openweathermap.org/img/w/${iconCode}.png`;
     }
@@ -135,7 +127,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to display search history
     function displaySearchHistory() {
         const searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
-        // Reverse the order and slice to get the last 10 items
         const recentSearches = searchHistory.slice(-10).reverse();
         
         searchHistoryList.innerHTML = '';
@@ -144,12 +135,9 @@ document.addEventListener('DOMContentLoaded', function () {
             const listItem = document.createElement('li');
             listItem.textContent = city;
     
-            // Add a click event listener to each search history item
             listItem.addEventListener('click', function () {
-                // Set the value of the city input to the clicked search history item
                 document.getElementById('city').value = city;
     
-                // Trigger form submission programmatically
                 form.dispatchEvent(new Event('submit'));
             });
     

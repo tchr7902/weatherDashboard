@@ -52,7 +52,6 @@ ul li {
     cursor: pointer;
 }
 
-/* Add some spacing to the date and forecast icon in the City Result section */
 span {
     margin-right: 10px;
 }
@@ -72,6 +71,8 @@ span {
     padding-top: 20px;
 }
 
+
+/* Style the form items */
 input[type="submit"] {
     width: 5em;
     padding: 5px;
