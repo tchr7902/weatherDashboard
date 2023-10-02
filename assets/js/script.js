@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Select the form, result, and search history elements
     const form = document.querySelector('form');
+    const resultBox = document.querySelector('.result-container h2');
     const resultContainer = document.querySelector('div:nth-child(2) ul');
     const forecastCardsContainer = document.getElementById('forecastCards');
     const searchHistoryList = document.querySelector('aside ul');
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(data => {
                 // Data from the API response
                 const cityResult = {
+                    name: data.name,
                     date: new Date().toLocaleDateString(),
                     forecastIcon: getWeatherIcon(data.weather[0].icon),
                     temperature: `${data.main.temp}°F`,
@@ -58,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to display city result
     function displayCityResult(data) {
+        resultBox.textContent = `${data.name}`;
         resultContainer.innerHTML = `
             <li>Date: ${data.date}</li>
             <li>Forecast Icon: <img src="${data.forecastIcon}" alt="Weather Icon"></li>

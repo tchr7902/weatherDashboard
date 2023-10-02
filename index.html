@@ -15,18 +15,18 @@
     
 <main>
     <!--Sidebar-->
-    <aside>
+    <aside id="aside">
         <h2>Search for a city!</h2>
 
     <!--Search Input-->
     <form id="citySearch">
-        <label for="city">City:</label><br>
+        <label for="city"></label><br>
         <input type="text" id="city" name="city"><br>
         <input type="submit">
     </form>
 
     <!--Search History-->
-        <div>
+        <div id="searchHistory">
             <ul>
             </ul>
         </div>
@@ -34,18 +34,18 @@
 
 <div id="resultBox">
     <!--City Result and basic info-->
-    <div>
-        <h2>City Result</h2>
-        <span></span>
-        <span>Forecast Icon</span>
+    <div class="result-container">
+        <h2></h2>
+        <ul id="currentWeather">
+        </ul>
         
     <!--Temperature, Wind, Humidity of today-->
-        <ul>
+        <ul id="todaysResults">
         </ul>
     </div>
 
     <!--5 day forecast section-->
-    <div>
+    <div id="forecast">
 
         <h2>5 Day Forecast</h2>
 
