@@ -54,7 +54,7 @@ span {
     margin-right: 10px;
 }
 
-#results {
+#resultBox {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
